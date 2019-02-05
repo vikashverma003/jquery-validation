@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<head>
+
+
+</head>
+<body>
+
+
+<button class="panel-btn"  data-panelId = "panel1">click me </button>
+<button class="panel-btn" data-panelId = "panel2">click me11 </button>
+<button class="panel-btn" data-panelId = "panel3">click me12 </button>
+<button class="panel-btn" data-panelId = "panel4">click me13 </button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+
+$(function(){
+
+
+$(".panel-btn").click(function(){
+
+var panel = $(this).attr('data-panelId');
+
+alert(panel);
+
+
+});
+
+
+
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

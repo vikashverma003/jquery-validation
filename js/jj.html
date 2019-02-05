@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<head>
+
+
+</head>
+<body>
+
+Name:<input type="text" name="fname" id= "fname" value=""><br>
+
+
+Lastname<input type="text" name="lname" id="lname" value="">
+
+<p id="data"></p>
+
+<button id="btn1">click me </button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+
+$(function(){
+
+//$("#submit").on("click", function(){
+
+ var $data = $("#data");
+ var $fname = $("#fname");
+
+var $lname = $("#lname");
+$("#btn1").click(function(){
+
+//alert("fgfd");
+//var fname = $("#fname").val();
+
+//var lname = $("#lname").val();
+var order = {
+
+fname:$fname.val(),
+
+lname:$lname.val(),
+
+}
+
+//alert(order.fname + order.lname);
+
+
+$.ajax({
+
+type:"POST",
+url:'data.php',
+data:order,
+
+success:function(data){
+
+$data.append(data);
+alert(data);
+console.log(data);
+
+}
+
+
+
+
+});
+
+
+
+
+
+});
+
+
+
+
+
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

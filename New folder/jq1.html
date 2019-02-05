@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<button type="button" class="btn btn-success" data-panelId = "panel1">Success</button>
+<button type="button" class="btn btn-success" data-panelId = "panel2">Success</button>
+<button type="button" class="btn btn-success" data-panelId = "panel3">Success</button>
+
+ 
+<div class="jumbotron">
+
+    <div class="col-xs-3" >
+		<div id="panel1" style="width:200px; height:130px;background-color:yellow; " class="panel-panel-primary">
+
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div></div>
+ <div class="col-xs-3" >
+	 <div id="panel2" style="width:200px; height:130px;background-color:pink; " class="panel-panel-primary">
+
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div></div>
+   <div class="col-xs-3" >
+   	<div id="panel3" style="width:200px; height:130px;background-color:red; " class="panel-panel-primary">
+
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div></div>
+  
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+
+$(function(){
+
+
+var content = "My new awesome content";
+
+$(".btn-success").click(function(){
+
+var panel = $(this).attr('data-panelId');
+
+//alert(panel);
+
+$('#'+panel).toggle();
+
+<!-- space is must belwo in  ' '  -->
+
+$('#'+panel+' .panel-body ').html(content);
+
+
+
+
+//$("#panel2 .panel-body").html("Panel 2 vntentejsdkjf ");
+
+
+//$("#panel2 .panel-body").html("Panel 2 vntentejsdkjf ");
+
+
+});
+
+
+
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
